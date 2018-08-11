@@ -46,7 +46,7 @@ public class FFMpegConverter implements Callable<ConverterOutput>, Converter {
                 }
             });
             progressParser.start();
-
+// ffmpeg -i 123.heic -qscale:v 2 -fmjpeg 123.jpg
             ProcessBuilder ffmpegProcessBuilder = new ProcessBuilder(FFMPEG,
                     "-i", mediaInfo.getFileName(),
                     "-vn",
